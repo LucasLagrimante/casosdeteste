@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Data de entrega: 16/novembro/2017
 
 A partir de um sistema web qualquer, que tenha pelo menos 10 classes de domínio, pede-se:
@@ -66,5 +65,3 @@ mock, e um screen shot do JUnit mostrando os testes passando. Deve-se ter, pelo 
 de teste.
 
 10 - Todos esses resultados devem estar num único relatório em formato pdf, iniciando com uma 
->>>>>>> c40aa781404c8bd3110d1e441973b63147576630
-apresentação do sistema que será utilizado nos testes.
