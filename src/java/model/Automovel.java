@@ -142,7 +142,7 @@ public class Automovel implements Serializable {
             } else if (this.custoTotal >= 150) {
                 return "Baja - Profissional";
             }
-        } else if (this.pesoCarro >= 300) {
+        } else if (this.pesoCarro <= 500) {
             if (this.custoTotal <= 50) {
                 return "Bugre - Amador";
             } else if (this.custoTotal < 100) {
