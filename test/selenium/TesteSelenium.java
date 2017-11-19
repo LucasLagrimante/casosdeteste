@@ -20,29 +20,6 @@ public class TesteSelenium {
     }
 
     @Test
-    public void testeAutomovel() throws Exception {
-        driver.get("http://localhost:8080/casosdeteste/ManterAutomovelController?acao=prepararOperacao&operacao=Incluir");
-        driver.findElement(By.id("id")).clear();
-        driver.findElement(By.id("id")).sendKeys("1");
-        driver.findElement(By.id("nome")).click();
-        driver.findElement(By.id("nome")).clear();
-        driver.findElement(By.id("nome")).sendKeys("Mario Kart");
-        driver.findElement(By.id("cor")).clear();
-        driver.findElement(By.id("cor")).sendKeys("azul");
-        driver.findElement(By.xpath("//table[@id='dataTermino_table']/tbody/tr[2]/td[3]/div")).click();
-        driver.findElement(By.xpath("(//button[@type='button'])[3]")).click();
-        driver.findElement(By.id("pesoCarro")).click();
-        driver.findElement(By.id("pesoCarro")).clear();
-        driver.findElement(By.id("pesoCarro")).sendKeys("100");
-        driver.findElement(By.id("pesoChassi")).click();
-        driver.findElement(By.id("pesoChassi")).clear();
-        driver.findElement(By.id("pesoChassi")).sendKeys("200");
-        driver.findElement(By.id("custo")).clear();
-        driver.findElement(By.id("custo")).sendKeys("1000");
-        driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
-    }
-
-    @Test
     public void testeArquitetura() throws Exception {
         driver.get("http://localhost:8080/casosdeteste/ManterArquiteturaController?acao=prepararOperacao&operacao=Incluir");
         driver.findElement(By.xpath("//ul[@id='select-options-2cf02295-3899-8039-7342-8bae5ec10293']/li[2]/span")).click();

@@ -125,6 +125,35 @@ public class Automovel implements Serializable {
         this.custoTotal = custoTotal;
     }
 
+    public String getCategoria() {
+        if (this.pesoCarro <= 100) {
+            if (this.pesoChassi <= 50) {
+                return "Carroça - Amador";
+            } else if (this.pesoChassi < 100) {
+                return "Carroça - Intermediário";
+            } else if (this.pesoChassi >= 150) {
+                return "Carroça - Profissional";
+            }
+        } else if (this.pesoCarro < 300) {
+            if (this.pesoChassi <= 50) {
+                return "Baja - Amador";
+            } else if (this.pesoChassi < 100) {
+                return "Baja - Intermediário";
+            } else if (this.pesoChassi >= 150) {
+                return "Baja - Profissional";
+            }
+        } else if (this.pesoCarro >= 300) {
+            if (this.pesoChassi <= 50) {
+                return "Bugre - Amador";
+            } else if (this.pesoChassi < 100) {
+                return "Bugre - Intermediário";
+            } else if (this.pesoChassi >= 150) {
+                return "Bugre - Profissional";
+            }
+        }
+        return "Sem Categoria";
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
