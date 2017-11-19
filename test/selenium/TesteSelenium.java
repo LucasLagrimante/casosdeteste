@@ -110,4 +110,17 @@ public class TesteSelenium {
         driver.findElement(By.id("frenagem")).sendKeys("154");
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
     }
+
+    @Test
+    public void testeDesign() throws Exception {
+        driver.get("http://localhost:8080/casosdeteste/ManterDesignController?acao=prepararOperacao&operacao=Incluir");
+        driver.findElement(By.xpath("//ul[@id='select-options-eecaa014-9a57-84d9-c870-12d96faa2668']/li[5]/span")).click();
+        driver.findElement(By.id("id")).click();
+        driver.findElement(By.id("id")).clear();
+        driver.findElement(By.id("id")).sendKeys("1");
+        driver.findElement(By.xpath("//div[3]/div/label")).click();
+        driver.findElement(By.id("caminhoImagem")).clear();
+        driver.findElement(By.id("caminhoImagem")).sendKeys("/imagem/imagemDesign.jpg");
+        driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+    }
 }
