@@ -1,4 +1,4 @@
-package junit;
+package UnitTest;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

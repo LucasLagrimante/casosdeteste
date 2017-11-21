@@ -5,6 +5,7 @@
  */
 package model;
 
+import dao.DAO;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -152,6 +153,10 @@ public class Automovel implements Serializable {
             }
         }
         return "Sem Categoria";
+    }
+
+    public boolean salvar(DAO automovelDAO) {
+        return automovelDAO.salvar(this);
     }
 
     @Override
