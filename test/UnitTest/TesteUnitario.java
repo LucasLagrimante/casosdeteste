@@ -127,7 +127,23 @@ public class TesteUnitario {
 
     //SEM CATEGORIA
     @Test
-    public void testCategoria_SemCategoria() {
+    public void testCategoria_SemCategoria1() {
+        automovel.setPesoCarro(100);
+        automovel.setCustoTotal(151);
+        String expResult = "Sem Categoria";
+        String result = automovel.getCategoria();
+        assertEquals(expResult, result);
+    }
+
+    public void testCategoria_SemCategoria2() {
+        automovel.setPesoCarro(299);
+        automovel.setCustoTotal(151);
+        String expResult = "Sem Categoria";
+        String result = automovel.getCategoria();
+        assertEquals(expResult, result);
+    }
+
+    public void testCategoria_SemCategoriafinal() {
         automovel.setPesoCarro(501);
         automovel.setCustoTotal(150);
         String expResult = "Sem Categoria";
