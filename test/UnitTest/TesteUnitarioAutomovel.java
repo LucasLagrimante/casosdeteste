@@ -17,9 +17,9 @@ import static org.junit.Assert.*;
  *
  * @author Aluno
  */
-public class TesteUnitario {
+public class TesteUnitarioAutomovel {
 
-    public TesteUnitario() {
+    public TesteUnitarioAutomovel() {
     }
 
     @BeforeClass
@@ -125,7 +125,7 @@ public class TesteUnitario {
         assertEquals(expResult, result);
     }
 
-    //SEM CATEGORIA
+    //SEM CATEGORIA - 1
     @Test
     public void testCategoria_SemCategoria1() {
         automovel.setPesoCarro(100);
@@ -135,6 +135,8 @@ public class TesteUnitario {
         assertEquals(expResult, result);
     }
 
+    //SEM CATEGORIA - 2
+    @Test
     public void testCategoria_SemCategoria2() {
         automovel.setPesoCarro(299);
         automovel.setCustoTotal(151);
@@ -143,6 +145,8 @@ public class TesteUnitario {
         assertEquals(expResult, result);
     }
 
+    //SEM CATEGORIA - 3
+    @Test
     public void testCategoria_SemCategoria3() {
         automovel.setPesoCarro(500);
         automovel.setCustoTotal(151);
@@ -151,6 +155,7 @@ public class TesteUnitario {
         assertEquals(expResult, result);
     }
 
+    @Test
     public void testCategoria_SemCategoriafinal() {
         automovel.setPesoCarro(501);
         automovel.setCustoTotal(0);
