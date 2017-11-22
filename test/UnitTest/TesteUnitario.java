@@ -143,9 +143,17 @@ public class TesteUnitario {
         assertEquals(expResult, result);
     }
 
+    public void testCategoria_SemCategoria3() {
+        automovel.setPesoCarro(500);
+        automovel.setCustoTotal(151);
+        String expResult = "Sem Categoria";
+        String result = automovel.getCategoria();
+        assertEquals(expResult, result);
+    }
+
     public void testCategoria_SemCategoriafinal() {
         automovel.setPesoCarro(501);
-        automovel.setCustoTotal(150);
+        automovel.setCustoTotal(0);
         String expResult = "Sem Categoria";
         String result = automovel.getCategoria();
         assertEquals(expResult, result);
