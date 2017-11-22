@@ -106,6 +106,7 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function () {
+
         $('select').material_select();
 
         $('body').css('background-image', "url('images/fundo.png')");
@@ -114,5 +115,6 @@
             constrainWidth: false, // Does not change width of dropdown to that of the activator
             hover: true // Activate on hover
         });
-    });
+    }
+    );
 </script>

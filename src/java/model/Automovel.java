@@ -132,7 +132,7 @@ public class Automovel implements Serializable {
                 return "Carroça - Amador";
             } else if (this.custoTotal < 100) {
                 return "Carroça - Intermediário";
-            } else if (this.custoTotal >= 150) {
+            } else if (this.custoTotal <= 150) {
                 return "Carroça - Profissional";
             }
         } else if (this.pesoCarro < 300) {
@@ -140,7 +140,7 @@ public class Automovel implements Serializable {
                 return "Baja - Amador";
             } else if (this.custoTotal < 100) {
                 return "Baja - Intermediário";
-            } else if (this.custoTotal >= 150) {
+            } else if (this.custoTotal <= 150) {
                 return "Baja - Profissional";
             }
         } else if (this.pesoCarro <= 500) {
@@ -148,7 +148,7 @@ public class Automovel implements Serializable {
                 return "Bugre - Amador";
             } else if (this.custoTotal < 100) {
                 return "Bugre - Intermediário";
-            } else if (this.custoTotal >= 150) {
+            } else if (this.custoTotal <= 150) {
                 return "Bugre - Profissional";
             }
         }

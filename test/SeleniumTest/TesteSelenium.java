@@ -2,19 +2,19 @@ package SeleniumTest;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TesteSelenium {
 
     private WebDriver driver;
-    private String baseUrl = "http://localhost:8080";
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.firefox.marionette", "C:\\Users\\Lucas Lagrimante\\Desktop\\casosdeteste\\geckodriver.exe");
+        System.setProperty("webdriver.firefox.marionette", "C:/Users/Lucas Lagrimante/Desktop/casosdeteste/geckodriver.exe");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -33,6 +33,8 @@ public class TesteSelenium {
         driver.findElement(By.id("imagem")).clear();
         driver.findElement(By.id("imagem")).sendKeys("/image/imagearquitetura.jpg");
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+        assertEquals("Pesquisa de Arquitetura", driver.findElement(By.xpath("//h3")).getText());
+
     }
 
     @Test
@@ -50,6 +52,7 @@ public class TesteSelenium {
         driver.findElement(By.xpath("//input[@value=' Delfino ']")).click();
         driver.findElement(By.xpath("//ul[@id='select-options-cb90912b-f14b-9392-7b9d-f435db38027f']/li[8]/span")).click();
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+        assertEquals("Pesquisa de Avaliação", driver.findElement(By.xpath("//h3")).getText());
     }
 
     @Test
@@ -73,6 +76,8 @@ public class TesteSelenium {
         driver.findElement(By.xpath("//input[@value=' Pista de Terra ']")).click();
         driver.findElement(By.xpath("//ul[@id='select-options-70dd5044-c5f9-b553-cf70-e124eb7d1c57']/li[10]/span")).click();
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+        assertEquals("Pesquisa de Competição", driver.findElement(By.xpath("//h3")).getText());
+
     }
 
     @Test
@@ -109,6 +114,8 @@ public class TesteSelenium {
         driver.findElement(By.id("frenagem")).clear();
         driver.findElement(By.id("frenagem")).sendKeys("154");
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+        assertEquals("Pesquisa de Desempenho", driver.findElement(By.xpath("//h3")).getText());
+
     }
 
     @Test
@@ -122,5 +129,7 @@ public class TesteSelenium {
         driver.findElement(By.id("caminhoImagem")).clear();
         driver.findElement(By.id("caminhoImagem")).sendKeys("/imagem/imagemDesign.jpg");
         driver.findElement(By.xpath("//button[@value='Confirmar']")).click();
+        assertEquals("Pesquisa de Deseign", driver.findElement(By.xpath("//h3")).getText());
+
     }
 }
