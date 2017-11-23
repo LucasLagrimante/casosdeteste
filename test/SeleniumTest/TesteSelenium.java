@@ -1,22 +1,29 @@
 package SeleniumTest;
 
-import java.util.concurrent.TimeUnit;
 import org.junit.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
 
 public class TesteSelenium {
 
-    private WebDriver driver;
+    private WebDriver driver = new ChromeDriver();
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
     @Before
     public void setUp() throws Exception {
-        System.setProperty("webdriver.firefox.marionette", "C:/Users/Lucas Lagrimante/Desktop/casosdeteste/geckodriver.exe");
-        driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+        driver = new ChromeDriver();
     }
 
     @Test
