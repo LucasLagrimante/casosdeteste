@@ -90,9 +90,6 @@ public class TesteSelenium {
     @Test
     public void testeDesempenho() throws Exception {
         driver.get("http://localhost:8080/casosdeteste/ManterDesempenhoController?acao=prepararOperacao&operacao=Incluir");
-        driver.findElement(By.xpath("//ul[@id='select-options-2ba8cbf4-9f88-63d4-b52d-b53df85f740d']/li[2]/span")).click();
-        driver.findElement(By.xpath("//ul[@id='select-options-61b10de1-890f-b846-dec8-2b651a4a4465']/li[4]/span")).click();
-        driver.findElement(By.xpath("//ul[@id='select-options-7dcd619c-76f7-bc5f-d2a5-af05e0894d6c']/li[5]/span")).click();
         driver.findElement(By.id("id")).click();
         driver.findElement(By.id("id")).clear();
         driver.findElement(By.id("id")).sendKeys("1");
